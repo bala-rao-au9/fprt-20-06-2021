@@ -1,10 +1,7 @@
-import {createStore, combineReducers} from "redux"
-import ProductsReducer from "./reducers/ProductsReducer"
-import CartReducer from "./reducers/CartReducer"
-import { devToolsEnhancer } from 'redux-devtools-extension';
-const root = combineReducers({
-    ProductsReducer,
-    CartReducer
-});
-const store = createStore(root, devToolsEnhancer());
-export default store;
+import React from "react";
+import ReactDOM from "react-dom";
+import App from "./components/App";
+import "bootstrap/dist/css/bootstrap.min.css";
+import "./stylesheets/index.css";
+
+ReactDOM.render(<App />, document.getElementById("root"));
